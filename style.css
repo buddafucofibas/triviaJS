@@ -1,0 +1,13 @@
+button,
+input {
+  cursor: pointer;
+}
+
+.gameboard {
+  display: none;
+}
+
+.container,
+.gameboard {
+  flex-direction: column;
+}
