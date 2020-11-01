@@ -1,5 +1,5 @@
-let data;
-let userAnswer;
+
+let userAnswer; 
 let round = 1;
 let questionNum = 0;
 let score = 0;
@@ -73,12 +73,12 @@ const displayQuestion = question => {
 }
 
 // fetches data from local json and stores it in an array
-(async () => {
-    const raw = await fetch('Apprentice_TandemFor400_Data.json');
-    const parsed = await raw.json();
-    data = tf(parsed);
-    data.pop();
-})();
+// (async () => {
+//     const raw = await fetch('/Apprentice_TandemFor400_Data.json');
+//     const parsed = await raw.json();
+//     data = tf(parsed);
+//     data.pop();
+// })();
 
 // detects when a user selects a radio input and enables submit button
 document.querySelector('.answers').addEventListener('click', e =>{
@@ -133,5 +133,7 @@ next.addEventListener('click', () => {
 document.querySelector('#start').addEventListener('click', function(){
    document.querySelector('#game_start').style.display = 'none';
    document.querySelector('.gameboard').style.display = 'flex';
+   data = tf(data);
+   data.pop();
    displayQuestion(data[questionNum]);
 });
