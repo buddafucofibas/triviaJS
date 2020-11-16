@@ -44,10 +44,17 @@ input {
   position: relative;
   top: 5em;
   background-color: #fdfdfd;
-  height: 60vh;
+  min-height: 60vh;
   padding-top: 2em;
   border: 1px solid #e6e6e6;
   border-radius: 3px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    top: 2em;
+    max-width: 95vw;
+  }
 }
 
 #game_start {
@@ -101,7 +108,7 @@ input {
 }
 
 .results {
-  height: 16.5px;
+  min-height: 16.25px;
   margin-bottom: 10px;
   margin-left: 1.5em;
 }
